@@ -23,7 +23,7 @@ const traceRoute = (destination,callback) => {
         });
         tracer.trace(destination);
     }catch(ex){
-        console.log(ex);
+        callback(undefined,ex,undefined);
     }
 }
 
