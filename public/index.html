@@ -1,0 +1,44 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Traceroute Map</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>    
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <div id="contain" class="input-button-container">
+      <header>
+        <h1>Traceroute Map</h1>
+      </header>
+      <form id="traceForm">
+        <input type="text" id="destination" placeholder="google.com" required />
+        <button type="submit">Trace</button>
+      </form>
+      <p id="error-report"></p>
+      <p id="your-ip-address"></p>
+        <ul id="results" style="overflow-y: auto;"></ul>
+      <i
+        id="reload-icon"
+        class="fa fa-refresh fa-spin"
+        style="font-size: 24px"
+        hidden
+      ></i>
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
